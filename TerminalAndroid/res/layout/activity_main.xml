@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/edittextBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/header"
+        style="@style/edittextBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:text="bhaskar@android40$>"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="RUN COMMAND" />
+
+    <TextView
+        android:id="@+id/outputscreen"
+        style="@style/edittextBackground"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_above="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/scrollview"
+        android:background="#000000"
+        android:hint="OUTPUT"
+        android:maxLines="200"
+        android:scrollbars="vertical"
+        android:textColorHint="#ADADAD" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="TYPE COMMAND HERE"
+            android:textColor="#141414"
+            android:textColorHint="#ADADAD" >
+
+            <requestFocus />
+        </EditText>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="COMMANDS LIST"
+        android:textColorHint="#ADADAD" />
+
+</RelativeLayout>
